@@ -11,6 +11,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -46,22 +47,22 @@ public class VoyageurServiceImplTest {
     @Test
     public void testAjouterVoyageur() {
 
-//        Mockito.when(voyageurService.ajouterVoyageur(ArgumentMatchers.any(Voyageur.class))).thenReturn(this.voyageur);
-//        Voyageur savedVoyageur= voyageurService.ajouterVoyageur(this.voyageur);
-//
-//        assertNotNull(savedVoyageur.getIdVoyageur());
-//        assertNotNull( savedVoyageur.getNomVoyageur());
-//    //	assertTrue(savedVoyageur.getQteMin()>0);
-//
-//        voyageurService.supprimerVoyageur(savedVoyageur);
+        Mockito.when(voyageurService.ajouterVoyageur(ArgumentMatchers.any(Voyageur.class))).thenReturn(this.voyageur);
+        Voyageur savedVoyageur= voyageurService.ajouterVoyageur(this.voyageur);
+
+        assertNotNull(savedVoyageur.getIdVoyageur());
+        assertNotNull( savedVoyageur.getNomVoyageur());
+    //	assertTrue(savedVoyageur.getQteMin()>0);
+
+        voyageurService.supprimerVoyageur(savedVoyageur);
 
     }
 
     @Test
     public void testSupprimerVoyageur() {
-//        voyageurService.ajouterVoyageur(this.voyageur);
-//        voyageurService.supprimerVoyageur(this.voyageur);
-//        assertNull(voyageurService.recupererVoyageParId(this.voyageur.getIdVoyageur()));
+        voyageurService.ajouterVoyageur(this.voyageur);
+        voyageurService.supprimerVoyageur(this.voyageur);
+        assertNull(voyageurService.recupererVoyageParId(this.voyageur.getIdVoyageur()));
     }
 
    
@@ -77,10 +78,10 @@ public class VoyageurServiceImplTest {
 
     @Test
     public void testModifierVoyageur() {
-//        this.voyageur.setNomVoyageur("Salim");
-//        Mockito.when(voyageurRepository.save(this.voyageur)).thenReturn(this.voyageur);
-//        Voyageur voyageur = voyageurService.modifierVoyageur(this.voyageur);
-//        Assertions.assertEquals(this.voyageur,voyageur);
+        this.voyageur.setNomVoyageur("Salim");
+        Mockito.when(voyageurRepository.save(this.voyageur)).thenReturn(this.voyageur);
+        Voyageur voyageur = voyageurService.modifierVoyageur(this.voyageur);
+        Assertions.assertEquals(this.voyageur,voyageur);
 
     }
 }
