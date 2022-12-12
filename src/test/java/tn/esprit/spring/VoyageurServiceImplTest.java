@@ -64,19 +64,7 @@ public class VoyageurServiceImplTest {
         assertNull(voyageurService.recupererVoyageParId(this.voyageur.getIdVoyageur()));
     }
 
-    @Test
-    public void testRecupererVoyageParId() {
-
-        Mockito.when(voyageurRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(this.voyageur));
-        Voyageur savedVoyageur=voyageurService.ajouterVoyageur(this.voyageur);
-
-       // Voyageur voyageur = voyageurService.recupererVoyageParId(savedVoyageur.getIdVoyageur());
-
-  //      assertNotNull(voyageur.getIdVoyageur());
-//        voyageurService.supprimerVoyageur(savedVoyageur);
-
-
-    }
+   
 
 
     /* @Test
