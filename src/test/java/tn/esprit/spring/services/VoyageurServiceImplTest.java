@@ -1,3 +1,5 @@
+
+/*
 package tn.esprit.spring.services;
 
 
@@ -68,13 +70,13 @@ public class VoyageurServiceImplTest {
    
 
 
-    /* @Test
-    public void testAddVoyageur() {
-        Mockito.when(sto.save(s)).thenReturn(s);
-        Voyageur s1 = voyageurService.addVoyageur(s);
-        Assertions.assertNotNull(s1);
-
-    } */
+//    @Test
+//    public void testAddVoyageur() {
+//        Mockito.when(sto.save(s)).thenReturn(s);
+//        Voyageur s1 = voyageurService.addVoyageur(s);
+//        Assertions.assertNotNull(s1);
+//
+//    }
 
     @Test
     public void testModifierVoyageur() {
@@ -85,3 +87,6 @@ public class VoyageurServiceImplTest {
 
     }
 }
+
+
+ */
