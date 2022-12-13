@@ -1,29 +1,29 @@
-version: "3"
+version: '3'
 services:
-  db:
-    container_name: examen_db
-    ports:
-      - '3306:3306'
+  database:
+    image: mysql
+    container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: Ci_Cd_DB
-    restart: always
-    image: mysql:latest
-     ports:
-      - "3306:3306"
+      MYSQL_DATABASE: Ci_Cd_DB   
+    ports:
+      - 3306:3306
     networks:
      - AppNet
-  
- spring-boot:
-    depends_on:
-      - db
-    container_name: springboot-app
-    ports:
-      - "8083:8083"
+     
+  spring-boot:
     image: amina98/examen
-   
+    container_name: springback
+    ports:
+      - 8083:8083
+    depends_on:
+      - database
+    networks:
+      - AppNet 
     restart: on-failure
-    
+networks:
+  AppNet:
+    driver: bridge
 
 
 
