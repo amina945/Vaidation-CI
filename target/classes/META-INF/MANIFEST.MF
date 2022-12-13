@@ -5,6 +5,6 @@ Implementation-Title: ExamThourayaS2
 Implementation-Version: 0.0.1-SNAPSHOT
 Implementation-Vendor-Id: tn.esprit
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
- -starter-parent/ExamThourayaS2
+ -starter-parent/examen
 Created-By: Maven Integration for Eclipse
 
