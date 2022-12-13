@@ -110,7 +110,7 @@
 
 
         </plugins>
-        <finalName>achat</finalName>
+        <finalName>examen</finalName>
 
 
     </build>
